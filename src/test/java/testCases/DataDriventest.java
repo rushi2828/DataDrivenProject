@@ -42,7 +42,7 @@ public class DataDriventest {
 	}
 	
 	@Test
-	public void fblogin() throws IOException {
+	public void fblogin() throws IOException, InterruptedException {
 		
 		// Import excel sheet.
 		File src= new File("/home/rushi/Desktop/testDATA.xlsx");
@@ -61,6 +61,7 @@ public class DataDriventest {
 			 Cell A2 = row 1 and column 0. It reads first row as 0, second row as 1 and so on 
 			 and first column (A) as 0 and second column (B) as 1 and so on*/ 
 			 
+			 
 			 // Import data for Email.
 			 cell = sheet.getRow(i).getCell(0);
 			 cell.setCellType(cell.CELL_TYPE_STRING);
@@ -68,14 +69,14 @@ public class DataDriventest {
 			 driver.findElement(By.id("email")).sendKeys(cell.getStringCellValue()); 
 			 
 			 
-			 
-			 
+			 			 
 			// Import data for password
 			 cell = sheet.getRow(i).getCell(1);
 			 cell.setCellType(cell.CELL_TYPE_STRING);
+			 driver.findElement(By.id("pass")).clear();
+			 driver.findElement(By.id("pass")).sendKeys(cell.getStringCellValue());
 			 
-			driver.findElement(By.id("pass")).clear();
-			driver.findElement(By.id("pass")).sendKeys(cell.getStringCellValue());
+			 Thread.sleep(10000);
 			
 		 }
 		 
@@ -87,34 +88,7 @@ public class DataDriventest {
 		 }
 		 
 		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
 		
 		
 	}
-}
+
