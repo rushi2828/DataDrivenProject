@@ -2,19 +2,23 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-11-28T10:27:14Z" name="Default suite" finished-at="2018-11-28T10:27:25Z" duration-ms="10641">
+  <suite started-at="2018-11-28T12:12:07Z" name="Default suite" finished-at="2018-11-28T12:13:27Z" duration-ms="79269">
     <groups>
     </groups>
-    <test started-at="2018-11-28T10:27:14Z" name="Default test" finished-at="2018-11-28T10:27:25Z" duration-ms="10641">
+    <test started-at="2018-11-28T12:12:07Z" name="Default test" finished-at="2018-11-28T12:13:27Z" duration-ms="79269">
       <class name="testCases.DataDriventest">
-        <test-method is-config="true" signature="initialisation()[pri:0, instance:testCases.DataDriventest@37271612]" started-at="2018-11-28T15:57:14Z" name="initialisation" finished-at="2018-11-28T15:57:25Z" duration-ms="10591" status="PASS">
+        <test-method is-config="true" signature="initialisation()[pri:0, instance:testCases.DataDriventest@37883b97]" started-at="2018-11-28T17:42:07Z" name="initialisation" finished-at="2018-11-28T17:42:32Z" duration-ms="24146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialisation -->
-        <test-method signature="fblogin()[pri:0, instance:testCases.DataDriventest@37271612]" started-at="2018-11-28T15:57:25Z" name="fblogin" finished-at="2018-11-28T15:57:25Z" duration-ms="15" status="PASS">
+        <test-method signature="fblogin()[pri:0, instance:testCases.DataDriventest@37883b97]" started-at="2018-11-28T17:42:32Z" name="fblogin" finished-at="2018-11-28T17:43:26Z" duration-ms="54538" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fblogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.DataDriventest@37883b97]" started-at="2018-11-28T17:43:26Z" name="tearDown" finished-at="2018-11-28T17:43:27Z" duration-ms="572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testCases.DataDriventest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
