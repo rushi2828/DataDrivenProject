@@ -3,6 +3,7 @@ package testCases;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -45,7 +46,8 @@ public class DataDriventest {
 	public void fblogin() throws IOException, InterruptedException {
 		
 		// Import excel sheet.
-		File src= new File("/home/rushi/Desktop/testDATA.xlsx");
+		File src= new File("/home/rushi/Desktop/git-Rushi2828/DataDrivenProject"
+				+ "/src/main/java/Resources/testDATA.xlsx");
 		
 		// Load the file.
 		FileInputStream fis = new FileInputStream(src);
@@ -76,7 +78,20 @@ public class DataDriventest {
 			 driver.findElement(By.id("pass")).clear();
 			 driver.findElement(By.id("pass")).sendKeys(cell.getStringCellValue());
 			 
-			 Thread.sleep(10000);
+			 Thread.sleep(5000);
+			 
+			 //Write excel sheet
+			 FileOutputStream fos = new FileOutputStream(src);
+			 
+			 //Message to written in excel sheet
+			 String message = "Pass";
+			 
+			// Create cell where data needs to be written.
+			 sheet.getRow(i).createCell(2).setCellValue(message);
+			 
+			// finally write content
+			 workbook.write(fos);
+			 
 			
 		 }
 		 
